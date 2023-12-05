@@ -1,6 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
-const { helmet } = require("helmet");
+const helmet = require("helmet");
+const compression = require("compression");
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(compression());
 // morgan("tiny")
 
 // init db
+require("./dbs/init.mongodb");
 
 // init routes
 app.get("/", (req, res, next) => {
