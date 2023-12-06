@@ -18,12 +18,7 @@ app.use(compression());
 require("./dbs/init.mongodb");
 
 // init routes
-app.get("/", (req, res, next) => {
-  const strCompress = "Hello";
-  return res.status(200).json({
-    message: "Hello World",
-  });
-});
+app.use("", require("./routes"));
 // handling
 
 module.exports = app;
