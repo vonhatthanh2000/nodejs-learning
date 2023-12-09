@@ -1,2 +1,11 @@
+@url=http://localhost:3055/v0/api/shop
+
 ### Signup
-POST http://localhost:3055/v0/api/shop/signup
+POST {{url}}/signup
+Content-Type: application/json
+
+{
+    "name": "ThanhShop",
+    "email": "thanhshop1@gmail.com",
+    "password": "ZXC123"
+}

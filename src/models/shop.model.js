@@ -1,8 +1,10 @@
 "use strict";
 
 const { Schema, model } = require("mongoose");
-const status = [ACTIVE, INACTIVE];
-const role = [ADMIN, USER];
+const status = {
+  Active: "ACTIVE",
+  Inactive: "INACTIVE",
+};
 
 const DOCUMENT_NAME = "Shop";
 const COLLECTION_NAME = "Shops";
@@ -27,7 +29,7 @@ var shopSchema = new Schema(
     status: {
       type: String,
       enum: status,
-      default: ACTIVE,
+      default: status.ACTIVE,
     },
     verify: {
       type: Schema.Types.Boolean,
