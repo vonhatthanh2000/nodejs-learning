@@ -3,6 +3,7 @@
 ### Signup
 POST {{url}}/signup
 Content-Type: application/json
+x-api-key: ea0eb6e491bb4e91874693dad2539a76ecd6e24d9f4719c30977b0e7ee1d4e3c2f1c3805f77ce6066a7d4b97a485bfdc15c0252fff1d497460e7defb08d34324
 
 {
     "name": "ThanhShop",
